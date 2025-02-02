@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Heaven - Book Store</title>
+    <style>
+        
+
+    body {
+    background-image:url('https://cdn.pixabay.com/photo/2019/11/19/22/24/watch-4638673_640.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; 
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:  rgba(36, 0, 8, 0.7);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 25px; 
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 15px; 
+}
+
+nav a:hover {
+    background-color: rgba(36, 0, 8, 0.7);
+    border-radius: 4px;
+}
+
+
+section {
+    padding-top: 120px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#home {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home-text {
+    max-width: 600px;
+  
+}
+
+.home-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-text .highlight {
+    color:  rgba(36, 0, 8, 0.7);
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.explore-btn {
+    display: inline-block;
+    background:  rgba(36, 0, 8, 0.7);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.explore-btn:hover {
+    background: #0d155a;
+}
+
+
+.home-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            
+        }
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    background-color: rgba(36, 0, 8, 0.7);
+    text-align: center;
+}
+
+.book-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.book-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.book-item .price {
+    color: white;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.book-item .book-description {
+    font-size: 1em;
+    color: white;
+}
+
+
+.book-item p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: white;
+}
+
+
+
+.about, .contact {
+    width: 60%;
+    margin: 20px auto;
+    background:  rgba(36, 0, 8, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.about-section {
+    position: relative;
+    background-image: url('https://cdn.pixabay.com/photo/2019/11/19/22/24/watch-4638673_640.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    max-width: 50%;
+    background-color:rgba(36, 0, 8, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.about-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(36, 0, 8, 0.7);
+    margin-top: 40px; 
+    margin-bottom: 40px;
+    min-height: 200px; 
+}
+
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: yellow;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgba(36, 0, 8, 0.7);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Read Heaven</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact us</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Step Into a World of Stories at <span class="highlight">Read Heaven</span></h2>
+                <p>Immerse yourself in a paradise of books, where every page unfolds a new adventure. From thrilling mysteries to heartwarming romances, our collection is curated for book lovers like you.</p>
+                <a href="#books" class="explore-btn">Explore Books</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="books">
+        <h2>Available Books</h2>
+        <div class="book-grid">
+            <div class="book-item">
+                <img src="https://i.pinimg.com/736x/f2/17/4d/f2174d7d1cd2dba36c65d794baf5ad51.jpg" alt="It Ends With Us">
+                <h3>It ends with us</h3>
+                <p class="price">1500 Ksh</p>
+                <p class="book-description">A gripping love story about heartbreak, resilience, and healing. A tale of a woman’s journey through love and loss.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/236x/c4/d4/70/c4d4705a66338754b00289868d73da24.jpg" alt="November 9th">
+                <h3>November 9th</h3>
+                <p class="price">1200 Ksh</p>
+                <p class="book-description">A romantic story of two people who meet on the same day each year. This book captures love and the passage of time.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/474x/01/94/64/01946435efff4dd1082a704d7358fe4d.jpg" alt="Bell Jar">
+                <h3>Bell Jar</h3>
+                <p class="price">1400 Ksh</p>
+                <p class="book-description">A deep exploration of mental health, identity, and the struggles of a young woman dealing with the pressures of life.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/236x/5d/30/61/5d306175947baa7947f36b567fcd1db1.jpg" alt="Perks of Being a Wallflower">
+                <h3>Perks of Being a Wallflower</h3>
+                <p class="price">1100 Ksh</p>
+                <p class="book-description">An introspective coming-of-age novel about a shy teenager navigating high school, friendships, and love.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/236x/f5/65/62/f565628b960f1526d6b441efdb81e50d.jpg" alt="To All the Bright Places">
+                <h3>To All the Bright Places</h3>
+                <p class="price">500 Ksh</p>
+                <p class="book-description">A heartbreaking and hopeful story about mental illness, love, and the importance of finding light in dark times.</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/236x/1c/60/97/1c609798a1215a02cbda75dfe82b992b.jpg" alt="If He Had Been With Me">
+                <h3>If He Had Been With Me</h3>
+                <p class="price">1000 Ksh</p>
+                <p class="book-description">A poignant tale of friendship, love, and the complexities of growing up, and the choices that define our lives.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Read Heaven is an online bookstore dedicated to providing a wide range of books for every kind of reader. Whether you love fiction, non-fiction, or educational books, we have something for you!</p>
+                <p>We strive to make the world of reading more accessible, affordable, and enjoyable for all. We select books to ensure you get only the best quality reading material, with affordable prices and a great selection.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us with any questions or comments.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:readheavenreads.com">readheavenreads.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">0765782567</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ReadHeaven Reads. All rights reserved.</p>
+        </div>
+    </footer>
+        
+</body>
+</html>
